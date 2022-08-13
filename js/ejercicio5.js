@@ -24,16 +24,19 @@ if(minutos == 60){ //agrego un minuto
 }
 
 cronometro.innerHTML = `
-<p>${horas}:${minutos}:${segundos} </p>
-
+<p>${horas}:${minutos}:${segundos}</p>
 `
+iniciar.disabled = true
 }
 ,100)
 
 }
 
+
+
 const pausarCron = () => {
     clearInterval(intervalo)
+    iniciar.disabled = false
 }
 
 const resetCron = () => {
@@ -44,4 +47,5 @@ const resetCron = () => {
     cronometro.innerHTML = `
 <p>${horas}:${minutos}:${segundos}</p> 
 `
+    iniciar.disabled = false
 }
