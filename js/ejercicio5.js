@@ -28,7 +28,7 @@ cronometro.innerHTML = `
 `
 iniciar.disabled = true
 }
-,100)
+,1000)
 
 }
 
